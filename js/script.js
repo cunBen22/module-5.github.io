@@ -117,6 +117,7 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
+      chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
       var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName);
 
 
@@ -344,3 +345,17 @@ function insertItemPortionName(html,
 global.$dc = dc;
 
 })(window);
+
+//debug
+
+function buildAndShowHomeHTML(categories) {
+  console.log("Received categories:", categories);
+
+  // Rest of the function...
+
+  var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
+  console.log("Chosen category short name:", chosenCategoryShortName);
+
+  // Rest of the function...
+}
+
